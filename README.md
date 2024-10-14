@@ -4,5 +4,11 @@ This project tries to analyze refugees and asylum seekers in Indonesia, and then
 ## Create Dataframe from Data Base 
 ```python
 
+import csv 
+import pandas as pd
+datarefugeesidn1115 = pd.read_csv("/Users/mymac/Desktop/Data Github/datarefugeesidn.csv", delimiter=';', header = None) # adjust columns and rows
+datarefugeesidn1115.columns = ['Year', 'Country', 'Origin', 'Refugees', 'AsylumSeekers', 'Total'] # create columns
+datarefugeesidn1115 = datarefugeesidn1115.iloc[1:] # delete more columns
+print(datarefugeesidn1115) #view data
 
 ```
