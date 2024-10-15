@@ -12,6 +12,20 @@ datarefugeesidn1115.columns = ['Year', 'Country', 'Origin', 'Refugees', 'AsylumS
 datarefugeesidn1115 = datarefugeesidn1115.iloc[1:] # delete more columns
 print(datarefugeesidn1115) #view data
 
+ Year    Country                Origin  Refugees  AsylumSeekers Total
+1    2011  Indonesia           Afghanistan     476.0         1649.0  2125
+2    2011  Indonesia               Albania       0.0            1.0     1
+3    2011  Indonesia            Bangladesh       0.0            2.0     2
+4    2011  Indonesia  Central African Rep.       0.0            1.0     1
+5    2011  Indonesia                 China      14.0           13.0    27
+..    ...        ...                   ...       ...            ...   ...
+171  2015  Indonesia                 Sudan     171.0          188.0   359
+172  2015  Indonesia          Sierra Leone       0.0           24.0    24
+173  2015  Indonesia               Somalia     448.0          724.0  1172
+174  2015  Indonesia      Syrian Arab Rep.      61.0           32.0    93
+175  2015  Indonesia                 Yemen       6.0          153.0   159
+[175 rows x 6 columns]
+
 ```
 ### Refugees & Aslyem Seekers
 ```python
