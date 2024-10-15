@@ -44,3 +44,4 @@ plt.style.use('seaborn-v0_8-white') #theme
 plt.show()
 
 ```
+![Data Refugees & Aslyum Seekers](datavisual/refugees&asylumseekersidn20112015.png)
