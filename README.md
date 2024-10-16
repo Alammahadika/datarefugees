@@ -72,7 +72,7 @@ import csv
 import pandas as pd
 
 idrefugees = pd.read_csv("/Users/mymac/Desktop/Data Github/indonesiarefugees.csv", delimiter=';', header = None)# adjust columns and rows
-idrefugees = idrefugees.drop('ExtraColumn', axis=1) # Delete columns and rows
+idrefugees = idrefugees.drop('ExtraColumn', axis=1) # Delete more columns and rows unimportant
 idrefugees.columns = ['Year', 'Country', 'Origin', 'Refugees', 'AsylumSeekers', 'Total'] # create columns
 idrefugees = idrefugees.iloc[1:] # delete more columns
 print(idrefugees) #view data
