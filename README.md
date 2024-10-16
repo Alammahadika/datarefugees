@@ -66,3 +66,8 @@ Positive correlation if we see the general trend of the number of “Refugees”
 Afghanistan was the country with the highest number of refugees and asylum seekers in Indonesia in the period 2011-2015, indicating a significant humanitarian crisis at that time. In general, there may be a positive correlation between the number of refugees and asylum seekers, although further analysis is needed for countries with unusual patterns (outliers). Temporal analysis (by year) shows fluctuations, which may be related to political events or conflicts in the countries of origin of the refugees.
 
 ## Indonesian People Refugees and Asylum Seekers 
+### Read Data Base
+```python
+
+
+```
