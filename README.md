@@ -93,3 +93,7 @@ print(idrefugees) #view data
 [100 rows x 6 columns]
 ```
 ### Analysis Indonesian People Refugees and Aslyum Seekers 2011 - 2015 
+```python
+
+
+```
