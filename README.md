@@ -77,4 +77,17 @@ idrefugees.columns = ['Year', 'Country', 'Origin', 'Refugees', 'AsylumSeekers', 
 idrefugees = idrefugees.iloc[1:] # delete more columns
 print(idrefugees) #view data
 
-```
+   Year           Country     Origin Refugees AsylumSeekers Total
+1    2011         Australia  Indonesia    232.0          75.0   307
+2    2011            Canada  Indonesia    368.0          47.0   415
+3    2011       Switzerland  Indonesia      1.0           1.0     2
+4    2011            Cyprus  Indonesia      1.0           7.0     8
+5    2011           Germany  Indonesia    127.0           0.0   127
+..    ...               ...        ...      ...           ...   ...
+96   2015          Malaysia  Indonesia    782.0          37.0   819
+97   2015       Netherlands  Indonesia     22.0           0.0    22
+98   2015  Papua New Guinea  Indonesia   9368.0           0.0  9368
+99   2015            Sweden  Indonesia      5.0          15.0    20
+100  2015      UnitedStates  Indonesia   3183.0         979.0  4162
+
+[100 rows x 6 columns]```
