@@ -90,4 +90,5 @@ print(idrefugees) #view data
 99   2015            Sweden  Indonesia      5.0          15.0    20
 100  2015      UnitedStates  Indonesia   3183.0         979.0  4162
 
-[100 rows x 6 columns]```
+[100 rows x 6 columns]
+```
