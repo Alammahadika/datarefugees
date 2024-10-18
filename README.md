@@ -86,19 +86,19 @@ indonesianrefugeesseekers = {
 
 # Dictionary country coordinate  (longitude, latitude)
 coords = {
-    "Australia": (133.7751, -25.2744),
-    "Canada": (-106.3468, 56.1304),
-    "Germany": (10.4515, 51.1657),
-    "France": (2.2137, 46.6034),
-    "United Kingdom": (-3.4360, 55.3781),
-    "Greece": (21.8243, 39.0742),
-    "Japan": (138.2529, 36.2048),
-    "South Korea": (127.7669, 35.9078),
-    "Malaysia": (101.9758, 4.2105),
-    "Netherlands": (5.2913, 52.1326),
-    "Papua New Guinea": (147.1803, -6.3149),
-    "Sweden": (18.6435, 60.1282),
-    "United States of America": (-95.7129, 37.0902)
+    "Australia": (133.7751, -25.2744),#🇦🇺
+    "Canada": (-106.3468, 56.1304),#🇨🇦
+    "Germany": (10.4515, 51.1657), #🇩🇪
+    "France": (2.2137, 46.6034),#🇫🇷
+    "United Kingdom": (-3.4360, 55.3781), #🇬🇧
+    "Greece": (21.8243, 39.0742), #🇬🇷
+    "Japan": (138.2529, 36.2048), #🗾
+    "South Korea": (127.7669, 35.9078), 
+    "Malaysia": (101.9758, 4.2105), #🇲🇾
+    "Netherlands": (5.2913, 52.1326), #🇳🇱
+    "Papua New Guinea": (147.1803, -6.3149), #🇵🇬
+    "Sweden": (18.6435, 60.1282), #🇸🇪
+    "United States of America": (-95.7129, 37.0902) #🇺🇸
 }
 
 # convert to DataFrame
@@ -111,6 +111,9 @@ world = world.merge(indonesianrefugesseekers2015, how="left", left_on="SOVERIGNT
 ```
 ### Analysis Indonesian People Refugees and Aslyum Seekers 2011 - 2015 
 ```python
+import matplotlib.pyplot as plt
+
+font1 = {'family':'serif','color':'black','size':15} # text for title
 
 
 ```
