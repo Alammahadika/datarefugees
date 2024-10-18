@@ -65,32 +65,45 @@ plt.show()
 Positive correlation if we see the general trend of the number of “Refugees” increasing along with the number of “Asylum Seekers”, this shows a positive correlation between the two variables. Although, it may show most people become Refugees, they tend to also become Asylum Seekers in Indonesia. Regarding outliers if the point is far from the general pattern. Like countries with the highest refugees but relatively fewer asylum seekers vice versa. This can be interesting for further analysis.
 Afghanistan was the country with the highest number of refugees and asylum seekers in Indonesia in the period 2011-2015, indicating a significant humanitarian crisis at that time. In general, there may be a positive correlation between the number of refugees and asylum seekers, although further analysis is needed for countries with unusual patterns (outliers). Temporal analysis (by year) shows fluctuations, which may be related to political events or conflicts in the countries of origin of the refugees.
 
-## Indonesian People Refugees and Asylum Seekers 
-### Read Data Base
+## Indonesian People Refugees and Asylum Seekers in The World 
+###  Data Base
 ```python
-import csv 
 import pandas as pd
+# file data from nautural earth # https://www.naturalearthdata.com/
 
-idrefugees = pd.read_csv("/Users/mymac/Desktop/Data Github/indonesiarefugees.csv", delimiter=';', header = None)# adjust columns and rows
-idrefugees = idrefugees.drop('ExtraColumn', axis=1) # Delete more columns and rows unimportant
-idrefugees.columns = ['Year', 'Country', 'Origin', 'Refugees', 'AsylumSeekers', 'Total'] # create columns
-idrefugees = idrefugees.iloc[1:] # delete more columns
-print(idrefugees) #view data
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shp")
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.dbf")
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shx")
 
-   Year           Country     Origin Refugees AsylumSeekers Total
-1    2011         Australia  Indonesia    232.0          75.0   307
-2    2011            Canada  Indonesia    368.0          47.0   415
-3    2011       Switzerland  Indonesia      1.0           1.0     2
-4    2011            Cyprus  Indonesia      1.0           7.0     8
-5    2011           Germany  Indonesia    127.0           0.0   127
-..    ...               ...        ...      ...           ...   ...
-96   2015          Malaysia  Indonesia    782.0          37.0   819
-97   2015       Netherlands  Indonesia     22.0           0.0    22
-98   2015  Papua New Guinea  Indonesia   9368.0           0.0  9368
-99   2015            Sweden  Indonesia      5.0          15.0    20
-100  2015      UnitedStates  Indonesia   3183.0         979.0  4162
 
-[100 rows x 6 columns]
+indonesianrefugeesseekers = {
+    'Country': ["Australia", "Canada", "Germany", "France", "United Kingdom", "Greece",
+                "Japan", "South Korea", "Malaysia", "Netherlands", "Papua New Guinea", 
+                "Sweden", "United States of America"],
+    'Indonesian': [494, 321, 27, 6, 24, 12, 854, 7, 819, 22, 9368, 20, 4162]
+}
+
+# Dictionary country coordinate  (longitude, latitude)
+coords = {
+    "Australia": (133.7751, -25.2744),
+    "Canada": (-106.3468, 56.1304),
+    "Germany": (10.4515, 51.1657),
+    "France": (2.2137, 46.6034),
+    "United Kingdom": (-3.4360, 55.3781),
+    "Greece": (21.8243, 39.0742),
+    "Japan": (138.2529, 36.2048),
+    "South Korea": (127.7669, 35.9078),
+    "Malaysia": (101.9758, 4.2105),
+    "Netherlands": (5.2913, 52.1326),
+    "Papua New Guinea": (147.1803, -6.3149),
+    "Sweden": (18.6435, 60.1282),
+    "United States of America": (-95.7129, 37.0902)
+}
+
+# convert to DataFrame
+indonesianrefugeesseekers2015 = pd.DataFrame(indonesianrefugeesseekers)
+
+
 ```
 ### Analysis Indonesian People Refugees and Aslyum Seekers 2011 - 2015 
 ```python
