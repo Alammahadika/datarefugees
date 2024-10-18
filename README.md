@@ -68,6 +68,7 @@ Afghanistan was the country with the highest number of refugees and asylum seeke
 ## Indonesian People Refugees and Asylum Seekers in The World 
 ###  Data Base
 ```python
+import geopandas as gpd
 import pandas as pd
 # file data from nautural earth # https://www.naturalearthdata.com/
 
@@ -102,6 +103,9 @@ coords = {
 
 # convert to DataFrame
 indonesianrefugeesseekers2015 = pd.DataFrame(indonesianrefugeesseekers)
+
+# Combine dataframe with world (data shapefile)
+world = world.merge(indonesianrefugesseekers2015, how="left", left_on="SOVERIGNT", right_on="Country")
 
 
 ```
