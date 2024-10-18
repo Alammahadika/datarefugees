@@ -109,7 +109,7 @@ world = world.merge(indonesianrefugesseekers2015, how="left", left_on="SOVERIGNT
 
 
 ```
-### Analysis Indonesian People Refugees and Aslyum Seekers 2011 - 2015 
+### Population Indonesian People Refugees and Aslyum Seekers 2011 - 2015 
 ```python
 import matplotlib.pyplot as plt
 
