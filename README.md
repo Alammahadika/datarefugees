@@ -104,6 +104,23 @@ coords = {
 # convert to DataFrame
 indonesianrefugeesseekers2015 = pd.DataFrame(indonesianrefugeesseekers)
 
+#view data
+print(indonesianrefugeesseekers2015)
+                     Country  Indonesian
+0                  Australia         494
+1                     Canada         321
+2                    Germany          27
+3                     France           6
+4             United Kingdom          24
+5                     Greece          12
+6                      Japan         854
+7                South Korea           7
+8                   Malaysia         819
+9                Netherlands          22
+10          Papua New Guinea        9368
+11                    Sweden          20
+12  United States of America        4162
+
 # Combine dataframe with world (data shapefile)
 world = world.merge(indonesianrefugesseekers2015, how="left", left_on="SOVERIGNT", right_on="Country")
 
