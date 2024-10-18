@@ -115,5 +115,19 @@ import matplotlib.pyplot as plt
 
 font1 = {'family':'serif','color':'black','size':15} # text for title
 
+# plot maps world
+fig, ax = plt.subplots(1, 1, figsize=(30, 18))
+
+# plot chorpleth
+world.boundary.plot(ax=ax) 
+world.plot(column='Indonesian', ax=ax, legend=True,
+cmap='OrRd',
+missing_kwds={'color':'lightgrey'},
+legend_kwds={'label':"Indonesian",
+'orientation': "horizontal"})
+
+world['centroid'] = world.geometry.centroid
+plt.title("Indonesian Refugees & Asylum Seekers 2014 to 2015", fontdict=font1)
+plt.show()
 
 ```
