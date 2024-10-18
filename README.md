@@ -131,3 +131,4 @@ plt.title("Indonesian Refugees & Asylum Seekers 2014 to 2015", fontdict=font1)
 plt.show()
 
 ```
+![Indonesian Refugees & Asylum Seekers](datavisual/indonesiapopulation.png)
