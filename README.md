@@ -151,4 +151,4 @@ plt.show()
 ![Indonesian Refugees & Asylum Seekers](datavisual/indonesiapopulation.png)
 
 ### Continues Analysis 
-Total data on the number of refugees and asylum seekers in the world in 2015, most of the countries chosen by Indonesia such as Australia and the United States, which countries open migration policies for refugees and asylum seekers. Neighboring countries Australia and Malaysia are the first destinations because of easy access and strong bilateral relations. The next question is why is Papua New Guinea also a destination country for Indonesian migration?
+Total data on the number of refugees and asylum seekers in the world in 2015, most of the countries chosen by Indonesia such as Australia and the United States, which countries open migration policies for refugees and asylum seekers. Neighboring countries Australia and Malaysia are the first destinations because of easy access and strong bilateral relations. The next question is why is Papua New Guinea also a destination country for Indonesian migration? 
