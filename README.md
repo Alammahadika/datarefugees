@@ -230,7 +230,10 @@ fig.update_xaxes(tickvals=[2011,2012,2013,2014,2015])
 # show plot
 fig.show()
 
-fig.write_html()
+
 
 ```
+![Indonesian Refugees & Asylum Seekers](datavisual/indonesianrefugees.png)
+### Interpetation Result
+
 
