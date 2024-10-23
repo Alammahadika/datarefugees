@@ -97,3 +97,50 @@ legend_kwds={'label':"Indonesian",
 world['centroid'] = world.geometry.centroid
 plt.title("Indonesian Refugees & Asylum Seekers 2014 to 2015", fontdict=font1)
 plt.show()
+
+
+# Indonesian Refugees & Asylum Seekers (2011 - 2015)
+import pandas as pd
+import plotly.graph_objects as go
+
+# Data untuk Refugees
+indonesianrefugee = pd.DataFrame({
+    'Year': [2011, 2012, 2013, 2014, 2015],
+    'Refugees': [16079, 15523, 14786, 14393, 13942]
+})
+
+# Data untuk Seekers
+indonesianseekers = pd.DataFrame({
+    'Year': [2011, 2012, 2013, 2014, 2015],
+    'Seekers': [429, 506, 1968, 1892, 2194]
+})
+
+# Membuat Figure
+fig = go.Figure()
+
+# Menambahkan trace untuk Refugees
+fig.add_trace(go.Scatter(x=indonesianrefugee['Year'],
+                         y=indonesianrefugee['Refugees'],
+                         mode='lines+markers',
+                         name="Indonesian Refugees",
+                         marker=dict(color='red'),
+                         line=dict(color='red')))
+
+# Menambahkan trace untuk Seekers
+fig.add_trace(go.Scatter(x=indonesianseekers['Year'],
+                         y=indonesianseekers['Seekers'],
+                         mode='lines+markers',
+                         name="Indonesian Seekers",
+                         marker=dict(color='blue'),
+                         line=dict(color='blue')))
+
+# Update layout untuk judul dan elemen lainnya
+fig.update_layout(title="Indonesian Refugees & Asylum Seekers (2011 - 2015)",
+                  xaxis_title="Years",
+                  yaxis_title="Indonesian",
+                  plot_bgcolor='rgb(255,255,255)',
+                  showlegend=True)
+fig.update_xaxes(tickvals=[2011,2012,2013,2014,2015])
+
+# Menampilkan plot
+fig.show()
