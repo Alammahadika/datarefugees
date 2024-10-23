@@ -176,3 +176,61 @@ indonesianseekers = pd.DataFrame({
     'Seekers': [429, 506, 1968, 1892, 2194]
 })
 ```
+### Analysis Graph Indonesian Refugees & Asylum Seekers 2011 - 2015 
+```python
+
+import pandas as pd
+import plotly.graph_objects as go
+
+
+# Data for Refugees
+indonesianrefugee = pd.DataFrame({
+    'Year': [2011, 2012, 2013, 2014, 2015],
+    'Refugees': [16079, 15523, 14786, 14393, 13942]
+})
+
+# Data for Seekers
+indonesianseekers = pd.DataFrame({
+    'Year': [2011, 2012, 2013, 2014, 2015],
+    'Seekers': [429, 506, 1968, 1892, 2194]
+})
+
+# create Figure
+fig = go.Figure()
+
+# add trace for Refugees
+fig.add_trace(go.Scatter(x=indonesianrefugee['Year'],
+                         y=indonesianrefugee['Refugees'],
+                         mode='lines+markers',
+                         name="Indonesian Refugees",
+                         marker=dict(color='red'),
+                         line=dict(color='red')))
+
+# add trave for Seekers
+fig.add_trace(go.Scatter(x=indonesianseekers['Year'],
+                         y=indonesianseekers['Seekers'],
+                         mode='lines+markers',
+                         name="Indonesian Seekers",
+                         marker=dict(color='blue'),
+                         line=dict(color='blue')))
+
+# Update layout for title and element or others
+fig.update_layout(title="Indonesian Refugees & Asylum Seekers 2011 - 2015",
+                  xaxis_title="Years",
+                  yaxis_title="Indonesian",
+                  plot_bgcolor='rgb(17,17,17)',
+                  paper_bgcolor='rgb(17,17,17)',
+                  font=dict(color="white"),
+                  xaxis=dict(showgrid=False),
+                  yaxis=dict(showgrid=False),
+                  showlegend=True)
+                  
+fig.update_xaxes(tickvals=[2011,2012,2013,2014,2015])
+
+# show plot
+fig.show()
+
+fig.write_html()
+
+```
+
