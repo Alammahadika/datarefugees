@@ -235,5 +235,4 @@ fig.show()
 ```
 ![Indonesian Refugees & Asylum Seekers](datavisual/indonesianrefugees.png)
 ### Interpetation Result
-
-
+Refugees (Red): From 2011 to 2015, the number of refugees has consistently decreased each year. This could indicate that the number of refugees entering or living in Indonesia is decreasing. Asylum Seekers (Blue): The graph shows a moderate increase from 2012 to 2015. This could indicate that more people are seeking asylum in Indonesia during this period.
