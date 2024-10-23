@@ -156,5 +156,23 @@ Total data on the number of refugees and asylum seekers in the world in 2015, mo
 ## Indonesian Refugees & Asylum Seekers 2011 - 2015
 ### Data Frame 
 ```python
+import pandas as pd
+import csv 
+# import dataset 
+indonesianrefugee = pd.read_csv("/Users/mymac/Desktop/Data Github/indonesianrefugees.csv", delimiter=';', header = None) # adjust columns and rows
+indonesianrefugee = indonesianrefugee.iloc[1:]
+indonesianrefugee.columns = ['Year', 'Seekers', 'Refugees'] # create colums 
+print(indonesianrefugee)
 
+# Data for Refugees
+indonesianrefugee = pd.DataFrame({
+    'Year': [2011, 2012, 2013, 2014, 2015],
+    'Refugees': [16079, 15523, 14786, 14393, 13942]
+})
+
+# Data for Seekers
+indonesianseekers = pd.DataFrame({
+    'Year': [2011, 2012, 2013, 2014, 2015],
+    'Seekers': [429, 506, 1968, 1892, 2194]
+})
 ```
