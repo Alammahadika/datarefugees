@@ -103,22 +103,23 @@ plt.show()
 import pandas as pd
 import plotly.graph_objects as go
 
-# Data untuk Refugees
+
+# Data for Refugees
 indonesianrefugee = pd.DataFrame({
     'Year': [2011, 2012, 2013, 2014, 2015],
     'Refugees': [16079, 15523, 14786, 14393, 13942]
 })
 
-# Data untuk Seekers
+# Data for Seekers
 indonesianseekers = pd.DataFrame({
     'Year': [2011, 2012, 2013, 2014, 2015],
     'Seekers': [429, 506, 1968, 1892, 2194]
 })
 
-# Membuat Figure
+# create Figure
 fig = go.Figure()
 
-# Menambahkan trace untuk Refugees
+# add trace for Refugees
 fig.add_trace(go.Scatter(x=indonesianrefugee['Year'],
                          y=indonesianrefugee['Refugees'],
                          mode='lines+markers',
@@ -126,7 +127,7 @@ fig.add_trace(go.Scatter(x=indonesianrefugee['Year'],
                          marker=dict(color='red'),
                          line=dict(color='red')))
 
-# Menambahkan trace untuk Seekers
+# add trave for Seekers
 fig.add_trace(go.Scatter(x=indonesianseekers['Year'],
                          y=indonesianseekers['Seekers'],
                          mode='lines+markers',
@@ -134,13 +135,19 @@ fig.add_trace(go.Scatter(x=indonesianseekers['Year'],
                          marker=dict(color='blue'),
                          line=dict(color='blue')))
 
-# Update layout untuk judul dan elemen lainnya
-fig.update_layout(title="Indonesian Refugees & Asylum Seekers (2011 - 2015)",
+# Update layout for title and element or others
+fig.update_layout(title="Indonesian Refugees & Asylum Seekers 2011 - 2015",
                   xaxis_title="Years",
                   yaxis_title="Indonesian",
-                  plot_bgcolor='rgb(255,255,255)',
+                  plot_bgcolor='rgb(17,17,17)',
+                  paper_bgcolor='rgb(17,17,17)',
+                  font=dict(color="white"),
+                  xaxis=dict(showgrid=False),
+                  yaxis=dict(showgrid=False),
                   showlegend=True)
+                  
 fig.update_xaxes(tickvals=[2011,2012,2013,2014,2015])
 
-# Menampilkan plot
+# show plot
 fig.show()
+
