@@ -98,7 +98,7 @@ coords = {
     "Netherlands": (5.2913, 52.1326), #🇳🇱
     "Papua New Guinea": (147.1803, -6.3149), #🇵🇬
     "Sweden": (18.6435, 60.1282), #🇸🇪
-    "United States of America": (-95.7129, 37.0902) #🇺🇸
+    "United States of America": (-95.7129, 37.0902) #🇺🇸 
 }
 
 # convert to DataFrame
